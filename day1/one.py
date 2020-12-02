@@ -1,4 +1,5 @@
 from typing import List
+from shared.file_reading import read_file
 
 def fix_expense_report(inputs: List[int]) -> int:
     result = 0
@@ -8,17 +9,6 @@ def fix_expense_report(inputs: List[int]) -> int:
                 if i + j + k == 2020:
                     result =  i * j * k
     return result
-
-
-def read_file(filename: str = 'puzzle.txt') -> List[str]:
-    strings = []
-    with open(filename) as f:
-        for line in f.readlines():
-            strings.append(line)
-    return strip_newlines(strings)
-
-def strip_newlines(strings: List[str]) -> List[str]:
-    return map(lambda s: s.strip(), strings)
 
 def convert_to_int(strings: List[str]) -> List[int]:
     return list(map(int, strings))
