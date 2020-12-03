@@ -6,13 +6,12 @@ from shared.file_reading import read_file
 
 def count_trees(lines: List[str], right: int = 3, down: int = 1) -> int:
     trees = 0
-    starting_pos = 0  # first square + 3
+    starting_pos = 0
 
     extensions = 2
     i = 0
     while i < len(lines) - 1:
 
-        line = lines[i]
         starting_pos += right
         i += down
 
