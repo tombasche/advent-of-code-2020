@@ -29,7 +29,6 @@ class Policy(BasePolicy):
                 occurrences += 1
         return self._first <= occurrences <= self._second
 
-
 class PositionPolicy(BasePolicy):
     
     def check_valid(self) -> bool:
